@@ -70,4 +70,23 @@ union - объединяет две таблицы выводя их в один
      all - делает так что бы одинаковые данные в отчете не дублировались 
 
 
-Задача
+**Задача 1:** Вывод группы с наибольшим количеством очков:
+
+CREATE table student (
+para INT, 
+name VARCHAR(265),
+money INT);
+
+INSERT INTO student (para, name, money) Values 
+(1,'Alex',10),
+(2,'Olga',20), 
+(3,'Fedor',300),
+(2,'Egor',41),
+(3,'Misha',10),
+(4,'Sveta',30);
+
+select para, SUM(money) as points
+from student
+group by para
+order by points desc
+limit 4;
