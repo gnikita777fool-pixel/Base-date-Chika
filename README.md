@@ -11,9 +11,9 @@
 ### Пример кода:
 
 **CREATE TABLE** *student* (
- - *pr_name* **VARCHAR(265)**, 
- - *age* **INT**,
- - *tax* **INT**);
+ <br> *pr_name* **VARCHAR(265)**, 
+ <br> *age* **INT**,
+ <br> *tax* **INT**);
 
 ## Внесение данных в таблицу:
 
