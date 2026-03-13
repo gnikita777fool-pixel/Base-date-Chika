@@ -72,21 +72,21 @@ union - объединяет две таблицы выводя их в один
 
 **Задача 1:** Вывод группы с наибольшим количеством очков:
 
-CREATE table student (
-para INT, 
-name VARCHAR(265),
-money INT);
+<br> CREATE table student (
+<br> para INT, 
+<br> name VARCHAR(265),
+<br> money INT);
 
-INSERT INTO student (para, name, money) Values 
-(1,'Alex',10),
-(2,'Olga',20), 
-(3,'Fedor',300),
-(2,'Egor',41),
-(3,'Misha',10),
-(4,'Sveta',30);
+<br> INSERT INTO student (para, name, money) Values 
+<br> (1,'Alex',10),
+<br> (2,'Olga',20), 
+<br> (3,'Fedor',300),
+<br> (2,'Egor',41),
+<br> (3,'Misha',10),
+<br> (4,'Sveta',30);
 
-select para, SUM(money) as points
-from student
-group by para
-order by points desc
-limit 4;
+<br> select para, SUM(money) as points
+<br> from student
+<br> group by para
+<br> order by points desc
+<br> limit 4;
