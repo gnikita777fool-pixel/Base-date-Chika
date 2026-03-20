@@ -108,3 +108,39 @@
 <br> **group by** para
 <br> **order by** points desc
 <br> **limit** 4;
+
+---
+
+**Задача 2:** Вывод группы в отдельную таблицу:
+
+CREATE TABLE student (
+    shop INT,
+    name VARCHAR(255),
+    money INT,
+    sex VARCHAR(255)
+);
+
+INSERT INTO student (shop, name, money, sex) VALUES
+(1, 'Vara', 10, 'm'),
+(2, 'Chara', 20, 'f'),
+(2, 'Baba', 10, 'm'),
+(1, 'Klava', 20, 'f');
+
+SELECT 
+    'По магазину' AS категория, 
+    CAST(shop AS CHAR) AS группа, 
+    SUM(money) AS сумма
+FROM student 
+GROUP BY shop
+
+UNION ALL
+
+SELECT 
+    'По полу' AS категория, 
+    sex AS группа, 
+    SUM(money) AS сумма
+FROM student 
+GROUP BY sex
+
+ORDER BY категория, сумма DESC;
+
