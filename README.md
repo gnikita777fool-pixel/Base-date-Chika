@@ -89,12 +89,12 @@
 
 **Задача 1:** Вывод группы с наибольшим количеством очков:
 
-<br> CREATE table student (
-<br> para INT, 
-<br> name VARCHAR(265),
-<br> money INT);
+<br> **CREATE TABLE** student (
+<br> para **INT**, 
+<br> name **VARCHAR(265)**,
+<br> money **INT**);
 
-<br> INSERT INTO student (para, name, money) Values 
+<br> **INSERT INTO** student (para, name, money) **Values**
 <br> (1,'Alex',10),
 <br> (2,'Olga',20), 
 <br> (3,'Fedor',300),
@@ -102,8 +102,8 @@
 <br> (3,'Misha',10),
 <br> (4,'Sveta',30);
 
-<br> select para, SUM(money) as points
-<br> from student
-<br> group by para
-<br> order by points desc
-<br> limit 4;
+<br> **SELECT** para, SUM(money) **as** points
+<br> **from** student
+<br> **group by** para
+<br> **order by** points desc
+<br> **limit** 4;
