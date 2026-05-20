@@ -92,7 +92,7 @@
 
 <br> **CREATE TABLE** student (
 <br> para **INT**, 
-<br> name **VARCHAR(265)**,
+<br> name **VARCHAR(255)**,
 <br> money **INT**);
 
 <br> **INSERT INTO** student (para, name, money) **Values**
@@ -120,29 +120,29 @@
 <br> sex **VARCHAR(255)**
 <br> );
 
-<br> INSERT INTO student (shop, name, money, sex) VALUES
-(1, 'Vara', 10, 'm'),
-(2, 'Chara', 20, 'f'),
-(2, 'Baba', 10, 'm'),
-(1, 'Klava', 20, 'f');
+<br> **INSERT INTO** student (shop, name, money, sex) VALUES
+<br> (1, 'Vara', 10, 'm'),
+<br> (2, 'Chara', 20, 'f'),
+<br> (2, 'Baba', 10, 'm'),
+<br> (1, 'Klava', 20, 'f');
 
-SELECT 
-    'По магазину' AS категория, 
-    CAST(shop AS CHAR) AS группа, 
-    SUM(money) AS сумма
-FROM student 
-GROUP BY shop
+<br> **SELECT**
+<br> 'По магазину' **AS** категория, 
+<br> **CAST**(shop AS CHAR) **AS** группа, 
+<br> **SUM**(money) **AS** сумма
+<br> **FROM** student 
+<br> **GROUP BY** shop
 
-UNION ALL
+<br> **UNION ALL**
 
-SELECT 
-    'По полу' AS категория, 
-    sex AS группа, 
-    SUM(money) AS сумма
-FROM student 
-GROUP BY sex
+<br> **SELECT**
+<br> 'По полу' **AS** категория, 
+<br> sex **AS** группа, 
+<br> **SUM**(money) **AS** сумма
+<br> **FROM** student 
+<br> **GROUP BY** sex
 
-ORDER BY категория, сумма DESC;
+<br> **ORDER BY** категория, сумма **DESC**;
 
 # Формы БД
 
