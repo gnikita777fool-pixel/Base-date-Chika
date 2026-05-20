@@ -113,14 +113,14 @@
 
 **Задача 2:** Вывод группы в отдельную таблицу:
 
-CREATE TABLE student (
-    shop INT,
-    name VARCHAR(255),
-    money INT,
-    sex VARCHAR(255)
-);
+<br> **CREATE TABLE** student (
+<br> shop **INT**,
+<br> name **VARCHAR(255)**,
+<br> money **INT**,
+<br> sex **VARCHAR(255)**
+<br> );
 
-INSERT INTO student (shop, name, money, sex) VALUES
+<br> INSERT INTO student (shop, name, money, sex) VALUES
 (1, 'Vara', 10, 'm'),
 (2, 'Chara', 20, 'f'),
 (2, 'Baba', 10, 'm'),
@@ -144,6 +144,14 @@ GROUP BY sex
 
 ORDER BY категория, сумма DESC;
 
-# Первое нормальная форма (1НФ)
+# Формы БД
+
+## Первое нормальная форма (1НФ)
 Должны быть атомарные (не делимые) Пример: ФИО - он должен разделятся на Имя, Отечство и Фамилию
+
+## Вторая нормальная форма (2НФ)
+Отсутсвие составных первичных ключей
+
+## Третья нормальная форма (3НФ)
+
 
